@@ -286,6 +286,8 @@ export default function TambahDataStudent() {
                         name="name"
                         id="name"
                         required
+                        value={formData.name}
+                        onChange={handleInputChange}
                         className="text-black w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                         placeholder="Masukkan nama lengkap"
                       />
@@ -297,14 +299,20 @@ export default function TambahDataStudent() {
                       <label htmlFor="position" className="block text-sm font-medium text-gray-700 mb-2">
                         Posisi *
                       </label>
-                      <input
-                        type="text"
+                      <select
                         name="position"
                         id="position"
                         required
-                        className="text-black w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                        placeholder="Contoh: Tugas Akhir/MBKM/Researcher Assistant/dll"
-                      />
+                        value={formData.position}
+                        onChange={(e) => setFormData(prev => ({ ...prev, position: e.target.value }))}
+                        className="text-black w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white"
+                      >
+                        <option value="" disabled>-- Pilih Posisi --</option>
+                        <option value="Postdoctoral">Postdoctoral</option>
+                        <option value="PhD Student">PhD Student</option>
+                        <option value="Master Student">Master Student</option>
+                        <option value="Bachelor Student">Bachelor Student</option>
+                      </select>
                     </div>
                     
                     {/* Masa Program */}
