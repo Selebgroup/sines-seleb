@@ -6,6 +6,7 @@ export default [
   // Other main routes with root layout
   route("tentang", "routes/tentang.tsx"),
   route("penelitian", "routes/penelitian.tsx"),
+  route("penelitian/:id", "routes/halaman_penelitian/detail_penelitian.tsx"),
   route("tim", "routes/tim.tsx"),
   route("data-tim-peneliti/:name", "routes/data_tim_peneliti.tsx"),
   route("berita", "routes/berita.tsx"),
