@@ -33,6 +33,9 @@ export default function Team() {
   const postdocs = studentMembers.filter((m) =>
     m.position?.toLowerCase() === "postdoctoral"
   );
+  const researchAssistants = studentMembers.filter((m) =>
+    m.position?.toLowerCase() === "researcher assistant"
+  );
   const phdStudents = studentMembers.filter((m) =>
     m.position?.toLowerCase() === "phd student"
   );
@@ -118,27 +121,36 @@ export default function Team() {
         </TeamSection>
       )}
 
-      {/* ── 03 PHD ── */}
+      {/* ── 03 RESEARCH ASSISTANTS ── */}
+      {researchAssistants.length > 0 && (
+        <TeamSection number="03" title="Research Assistants" count={researchAssistants.length} bg="bg-white">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {researchAssistants.map((student, i) => <StudentCard key={i} student={student} />)}
+          </div>
+        </TeamSection>
+      )}
+
+      {/* ── 04 PHD ── */}
       {phdStudents.length > 0 && (
-        <TeamSection number="03" title="PhD Students" count={phdStudents.length} bg="bg-white">
+        <TeamSection number="04" title="PhD Students" count={phdStudents.length} bg="bg-gray-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {phdStudents.map((student, i) => <StudentCard key={i} student={student} />)}
           </div>
         </TeamSection>
       )}
 
-      {/* ── 04 MASTER ── */}
+      {/* ── 05 MASTER ── */}
       {masterStudents.length > 0 && (
-        <TeamSection number="04" title="Master Students" count={masterStudents.length} bg="bg-gray-50">
+        <TeamSection number="05" title="Master Students" count={masterStudents.length} bg="bg-white">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {masterStudents.map((student, i) => <StudentCard key={i} student={student} />)}
           </div>
         </TeamSection>
       )}
 
-      {/* ── 05 BACHELOR ── */}
+      {/* ── 06 BACHELOR ── */}
       {bachelorStudents.length > 0 && (
-        <TeamSection number="05" title="Bachelor Students" count={bachelorStudents.length} bg="bg-white">
+        <TeamSection number="06" title="Bachelor Students" count={bachelorStudents.length} bg="bg-gray-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {bachelorStudents.map((student, i) => <StudentCard key={i} student={student} />)}
           </div>
@@ -223,6 +235,12 @@ function ResearcherCard({ faculty }: { faculty: any }) {
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Specialization</p>
             <p className="text-gray-700 leading-snug">{faculty.specialization}</p>
           </div>
+          {faculty.education && (
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Education</p>
+              <p className="text-gray-700 leading-snug">{faculty.education}</p>
+            </div>
+          )}
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Email</p>
             <p className="text-gray-700 break-all text-xs">{faculty.email}</p>
@@ -277,6 +295,12 @@ function StudentCard({ student }: { student: any }) {
           <div>
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Research Topic</p>
             <p className="text-gray-700 leading-snug line-clamp-3">{student.researchTopic}</p>
+          </div>
+        )}
+        {student.education && (
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Education</p>
+            <p className="text-gray-700 leading-snug">{student.education}</p>
           </div>
         )}
         {student.supervisor && (

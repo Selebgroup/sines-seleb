@@ -384,6 +384,7 @@ export default function EditDataStudent() {
                         >
                           <option value="" disabled>-- Pilih Posisi --</option>
                           <option value="Postdoctoral">Postdoctoral</option>
+                          <option value="Researcher Assistant">Researcher Assistant</option>
                           <option value="PhD Student">PhD Student</option>
                           <option value="Master Student">Master Student</option>
                           <option value="Bachelor Student">Bachelor Student</option>
