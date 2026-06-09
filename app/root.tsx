@@ -126,8 +126,8 @@ function Navigation() {
                 News
               </NavLink>
 
-              {/* <NavLink
-                to="/publikasi"
+              <NavLink
+                to="/our-projects"
                 className={({ isActive }) =>
                   `px-3 py-2 rounded-md text-sm font-medium transition-colors drop-shadow-md ${
                     isActive
@@ -136,8 +136,8 @@ function Navigation() {
                   }`
                 }
               >
-                Publication
-              </NavLink> */}
+                Our Projects
+              </NavLink>
 
               <NavLink
                 to="/kontak"
@@ -248,8 +248,8 @@ function Navigation() {
               News
             </NavLink>
 
-            {/* <NavLink
-              to="/publikasi"
+            <NavLink
+              to="/our-projects"
               className={({ isActive }) =>
                 `block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   isActive
@@ -259,8 +259,8 @@ function Navigation() {
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Publication
-            </NavLink> */}
+              Our Projects
+            </NavLink>
 
             <NavLink
               to="/kontak"

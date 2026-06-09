@@ -10,6 +10,7 @@ export default [
   route("tim", "routes/tim.tsx"),
   route("data-tim-peneliti/:name", "routes/data_tim_peneliti.tsx"),
   route("berita", "routes/berita.tsx"),
+  route("our-projects", "routes/our_projects.tsx"),
   route("kontak", "routes/kontak.tsx"),
 
   // Admin routes
