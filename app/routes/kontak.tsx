@@ -296,8 +296,10 @@ export default function Contact() {
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900">Research Focus</h3>
                   </div>
                   <div className="space-y-2 text-gray-600 text-sm sm:text-base">
-                    <p>• Research Focus Name</p>
-                    <p>• Research Focus Name</p>
+                    <p>• Eco-Devices</p>
+                    <p>• Electronic Circuits</p>
+                    <p>• Digitalization</p>
+                    <p>• Smart-EcoTronics</p>
                   </div>
                 </div>
 
